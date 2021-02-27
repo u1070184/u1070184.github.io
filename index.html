@@ -1,62 +1,52 @@
 <!DOCTYPE html>
-<!-- saved from url=(0070)https://bit.webduino.io/blockly/live-preview.html#-MUWLYFPE29qdTeje6xB -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0053)file:///C:/Users/Student/Downloads/jsbin.yemal.1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="robots" content="noindex">
+
+
+
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Webduino Blockly Demo 02</title>
+  <title>Webduino Blockly Demo 05</title>
   <script src="./index_files/jquery.min.js.下載"></script>
   <script src="./index_files/webduino-all.min.js.下載"></script>
   <script src="./index_files/MessageTransport.min.js.下載"></script>
   <script src="./index_files/webduino-blockly.min.js.下載"></script>
   <script src="./index_files/firebase.min.js.下載"></script>
-  <script src="./index_files/runtime.min.js.下載"></script><script src="./index_files/BitLedMatrix-blockly.js.下載"></script><script src="./index_files/BitLedMatrix.js.下載"></script>
-
-  <style>#demo-area-02-light img {
-  height: 200px;
-  display: none;
+  <script src="./index_files/runtime.min.js.下載"></script>
+  <script src="./index_files/BitLedMatrix-blockly.js.下載"></script>
+  <script src="./index_files/BitLedMatrix.js.下載"></script>
+<style id="jsbin-css">
+.db5 {
+  font-size: 24px;
+  outline: none;
+  margin: 0 10px 10px 0;
   pointer-events: auto!important;
 }
 
-#demo-area-02-light.on #demo-area-02-on {
-  display: inline-block;
-  pointer-events: auto!important;
+button:hover {
+  box-shadow: 2px 2px 5px #888;
 }
-
-#demo-area-02-light.off #demo-area-02-off {
-  display: inline-block;
-  pointer-events: auto!important;
-}</style>
+</style>
 </head>
+ <body><h1>何帥智慧宅</h1>
 
-<body>
-  <div><div id="demo-area-02-light" class="off">
-    <img src="./index_files/off.jpg" id="demo-area-02-off">
-    <img src="./index_files/on.jpg" id="demo-area-02-on">
-  </div></div>
-
-  <script>var matrix;
-var _E8_AE_8A_E6_95_B8;
+  <div><button id="demo-area-05-btn1" class="db5">按鈕 1</button>
+    <button id="demo-area-05-btn2" class="db5">按鈕 2</button>
+ 
+<script id="jsbin-javascript">
+var matrix;
 
 
 boardReady({board: 'Bit', device: 'aM2C7CWMF4kFBMHXD', transport: 'mqtt'}, function (board) {
   board.samplingInterval = 250;
   matrix = getMatrix(board, 4, 25);
-  _E8_AE_8A_E6_95_B8 = 0;
-  document.getElementById("demo-area-02-light").addEventListener("click", function(){
-    if (document.getElementById("demo-area-02-light").className == "on") {
-       document.getElementById("demo-area-02-light").className = "off";
-    } else {
-      document.getElementById("demo-area-02-light").className = "on";
-    }
-    _E8_AE_8A_E6_95_B8 = (typeof _E8_AE_8A_E6_95_B8 == 'number' ? _E8_AE_8A_E6_95_B8 : 0) + 1;
-    if (_E8_AE_8A_E6_95_B8 % 2 == 1) {
-      matrix.setColor('#ff0000');
-    } else {
-      matrix.setColor('#66ff99');
-    }
+  document.getElementById("demo-area-05-btn1").addEventListener("click",function(){
+    matrix.setColor('#ff0000');
+  });
+  document.getElementById("demo-area-05-btn2").addEventListener("click",function(){
+    matrix.setColor('#3333ff');
   });
 });
+
 </script>
-
-
-</body></html>
+</div></body></html>
